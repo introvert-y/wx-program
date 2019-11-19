@@ -1,0 +1,7 @@
+<view class="name">hello world</view>
+
+<button bindtap="navigate" data-info="{{ {name: 'detail', query: {name: 'Anny'} } }}">query传参</button>
+
+<button bindtap="navigate" data-info="{{ {name: 'detail', data: {name: 'Ming'} } }}">data传参</button>
+
+<button bindtap="navigate" data-info="{{ {name: 'message', data: {name: '11111'} } }}">跳转至Tab页</button>
