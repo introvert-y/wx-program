@@ -1,2 +1,2 @@
-# xc-program
+# wx-program
 微信小程序
