@@ -1,0 +1,4 @@
+**/*.wxs
+pages/utils/date.js
+# pages/utils/ald-stat.js
+# pages/utils/calendar.js
