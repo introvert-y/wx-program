@@ -1,6 +1,7 @@
 const utils = require('../utils/index.js');
 
 const timeZone = 8; // 目标时区时间，东八区
+// eslint-disable-next-line max-len
 const timeZoneOffset = new Date().getTimezoneOffset() * 60 * 1000 + timeZone * 60 * 60 * 1000; // 本地时间和格林威治的时间差，单位为分钟
 
 /**
@@ -16,6 +17,7 @@ function getTimestamp8(timestamp) {
  * @param timestamp 时间戳
  */
 function getDate8(timestamp) {
+  // eslint-disable-next-line max-len
   const nowDate = (timestamp ? new Date(timestamp) : new Date()).getTime(); // 本地时间距 1970 年 1 月 1 日午夜（GMT 时间）之间的毫秒数
   const targetDate = new Date(getTimestamp8(nowDate));
   return targetDate;
