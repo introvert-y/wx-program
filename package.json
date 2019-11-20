@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "lint": "eslint client"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint"
