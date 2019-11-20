@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "lint": "eslint pages --fix"
+    "lint": "eslint pages"
   },
   "husky": {
     "hooks": {
