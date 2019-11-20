@@ -5,5 +5,5 @@ Page({
   //   return config.shareData;
   // },
   onReady() {
-  }
+  },
 });

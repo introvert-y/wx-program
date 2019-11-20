@@ -5,11 +5,20 @@ Page({
   //   return config.shareData;
   // },
   onReady() {
-    const arr = [1,2,3].map(item => ({id: item,}));
-    arr.map(obj => {
+    const arr = [1, 2, 3].map((item) => ({ id: item }));
+    arr.map((obj) => {
       obj.name = '111';
       return obj;
     });
+    const obj = {
+      b: {
+        name: 'Ming',
+      },
+    };
+    const clone = this.deepCopyTwo(obj);
+    console.log(clone);
+    obj.b.name = '2222';
+    console.log(clone);
   },
   navigate: router.navigate,
   queryTo() {
@@ -21,7 +30,7 @@ Page({
       query: {
         name: 'Ming',
       },
-    })
+    });
   },
   dataTo() {
     router.push({
@@ -29,21 +38,20 @@ Page({
       data: {
         name: 'Anny',
       },
-    })
+    });
   },
   deepCopyTwo(obj) {
     const that = this;
-    let objClone = Array.isArray(obj) ? [] : {};
-    if (obj && typeof obj == 'object') {
-        for (const key in obj) {
-            //判断obj子元素是否为对象，如果是，递归复制
-            if (obj[key] && typeof obj[key] === "object") {
-                objClone[key] = that.deepCopyTwo(obj[key]);
-            } else {
-                //如果不是，简单复制
-                objClone[key] = obj[key];
-            }
+    const objClone = Array.isArray(obj) ? [] : {};
+    if (obj && typeof obj === 'object') {
+      obj.forEach((item, index) => {
+        if (typeof item === 'object') {
+          objClone[index] = that.deepCopyTwo(item);
+        } else {
+          // 如果不是，简单复制
+          objClone[index] = item;
         }
+      });
     }
     return objClone;
   },

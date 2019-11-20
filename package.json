@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "lint": "eslint client"
+    "lint": "eslint pages --fix"
   },
   "husky": {
     "hooks": {
@@ -10,6 +10,7 @@
   "dependencies": {
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "husky": "^3.1.0"
   }
 }
