@@ -1,3 +1,7 @@
+/**
+ * 工具集
+ */
+
 const config = {
   openMP: {
     envVersion: 'release', // release正式版 trial体验版 develop开发版

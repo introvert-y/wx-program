@@ -1,14 +1,19 @@
-const { router } = require('../../framework/index.js');
+const { router, config, req } = require('../../framework/index.js');
 
 Page({
+  data: {
+    faq: config.faqTable[15],
+  },
   onReady() {
-    const arr = [1, 2, 3].map((item) => ({ id: item }));
-    arr.map((obj) => {
-      obj.name = '111';
-      return obj;
-    });
+    this.getList();
   },
   navigate: router.navigate,
+  getList() {
+    req.common.getMetaData()
+      .then((r1) => {
+        console.log(r1);
+      });
+  },
   queryTo() {
     // wx.navigateTo({
     //   url: '/pages/message/index',
@@ -17,14 +22,6 @@ Page({
       name: 'message',
       query: {
         name: 'Ming',
-      },
-    });
-  },
-  dataTo() {
-    router.push({
-      name: 'message',
-      data: {
-        name: 'Anny',
       },
     });
   },

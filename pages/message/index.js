@@ -4,6 +4,7 @@ Page({
   // onShareAppMessage() {
   //   return config.shareData;
   // },
-  onReady() {
+  onLoad() {
+    console.log('onLoad');
   },
 });

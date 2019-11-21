@@ -5,3 +5,6 @@
 <button bindtap="navigate" data-info="{{ {name: 'detail', data: {name: 'Ming'} } }}">data传参</button>
 
 <button bindtap="navigate" data-info="{{ {name: 'message', data: {name: '11111'} } }}">跳转至Tab页</button>
+
+<!-- 承载网页的容器。会自动铺满整个小程序页面，个人类型的小程序暂不支持使用。 -->
+<button bindtap="navigate" data-info="{{ faq.route }}">跳转外部</button>

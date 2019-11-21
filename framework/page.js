@@ -16,8 +16,14 @@ module.exports = (options = {}) => {
       this.$optData = optData;
       console.log('Page $optData:', optData);
       console.log('Page $opts:', opts);
+      /**
+       * 拦截后再暴露出去，缺少这步则会拦截所有的onLoad方法
+       */
+      if (onLoad) {
+        onLoad.apply(this, res);
+      }
     },
   };
-  const newOptions = Object.assign({}, options, patchOptions);
+  const newOptions = { ...options, ...patchOptions };
   return page(newOptions);
 };

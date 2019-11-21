@@ -3,7 +3,8 @@
     "pages/home/index",
     "pages/message/index",
     "pages/user_center/index",
-    "pages/detail/index"
+    "pages/detail/index",
+    "pages/webview/help/index"
   ],
   "tabBar": {
     "list": [
