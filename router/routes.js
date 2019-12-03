@@ -11,5 +11,9 @@ module.exports = {
   user_center: {
     type: 'tab',
     path: '/pages/user_center/index',
-  }
+  },
+  diagram: {
+    type: 'tab',
+    path: '/pages/diagram/index',
+  },
 };

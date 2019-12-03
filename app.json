@@ -4,17 +4,22 @@
     "pages/message/index",
     "pages/user_center/index",
     "pages/detail/index",
-    "pages/webview/help/index"
+    "pages/webview/help/index",
+    "pages/diagram/index"
   ],
   "tabBar": {
     "list": [
       {
-      "pagePath": "pages/home/index",
-      "text": "首页"
+        "pagePath": "pages/home/index",
+        "text": "首页"
       },
       {
         "pagePath": "pages/message/index",
         "text": "消息"
+      },
+      {
+        "pagePath": "pages/diagram/index",
+        "text": "图表"
       },
       {
         "pagePath": "pages/user_center/index",

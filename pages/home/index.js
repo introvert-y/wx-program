@@ -5,14 +5,13 @@ Page({
     faq: config.faqTable[15],
   },
   onReady() {
-    this.getList();
+    // this.getList();
   },
   navigate: router.navigate,
   getList() {
-    req.common.getMetaData()
-      .then((r1) => {
-        console.log(r1);
-      });
+    req.common.getMetaData().then((r1) => {
+      console.log(r1);
+    });
   },
   queryTo() {
     // wx.navigateTo({

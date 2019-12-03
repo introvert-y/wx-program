@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "m-bar-chart": "../../components/m-bar-chart/index"
+  }
+}
