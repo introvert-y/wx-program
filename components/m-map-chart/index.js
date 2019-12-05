@@ -249,9 +249,9 @@ Component({
       setFirstOption(chart);
     });
     const that = this;
-    setTimeout(() => {
-      updateChart(that.myChart);
-    }, 3000);
+    // setTimeout(() => {
+    //   updateChart(that.myChart);
+    // }, 3000);
   },
   detached() {
     if (!this.myChart) {
