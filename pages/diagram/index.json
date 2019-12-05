@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "m-bar-chart": "../../components/m-bar-chart/index"
+    "m-bar-chart": "../../components/m-bar-chart/index",
+    "m-map-chart": "../../components/m-map-chart/index"
   }
 }
