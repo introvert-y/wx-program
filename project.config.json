@@ -72,6 +72,14 @@
 					"id": -1,
 					"name": "走马灯",
 					"pathName": "pages/carousel/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "地图组件的实践",
+					"pathName": "pages/map/index",
+					"query": "",
 					"scene": null
 				}
 			]

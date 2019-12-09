@@ -1,16 +1,5 @@
 <view class="name">个人中心</view>
-<swiper
-  display-multiple-items="{{1}}"
-  previous-margin="{{previousMargin}}"
-  next-margin="{{nextMargin}}"
-  indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}"
-  interval="{{interval}}"
-  duration="{{duration}}"
-  circular="{{circular}}"
-  skip-hidden-item-layout="{{skip}}"
-  bindchange="swiperBindchange"
->
+<swiper display-multiple-items="{{1}}" previous-margin="{{previousMargin}}" next-margin="{{nextMargin}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" skip-hidden-item-layout="{{skip}}" display-multiple-items="{{number}}" bindchange="swiperBindchange">
   <swiper-item wx:for="{{record}}" wx:key="id">
     <view class="avt {{currentSwiperIndex === index ? 'zoom-in' : 'zoom-out'}}" style="background-image: url({{item.imgUrl}})">
       <!-- <div className="info">

@@ -6,7 +6,8 @@
     "pages/detail/index",
     "pages/webview/help/index",
     "pages/diagram/index",
-    "pages/carousel/index"
+    "pages/carousel/index",
+    "pages/map/index"
   ],
   "tabBar": {
     "borderStyle": "white",

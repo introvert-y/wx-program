@@ -125,23 +125,35 @@ const record = [
 Page({
   data: {
     record,
-    indicatorDots: true,
-    vertical: false,
+    length: record.length,
+    indicatorDots: false, // 是否显示面板指示点
+    vertical: false, // 滑动方向是否为纵向
     autoplay: true,
-    interval: 1000,
-    duration: 500,
+    interval: 1000, // 自动切换时间间隔
+    duration: 500, // 滑动动画时长
     circular: true, // 平滑衔接
     skip: true, // 是否跳过未显示的滑块布局，设为 true 可优化复杂情况下的滑动性能，但会丢失隐藏状态滑块的布局信息
-    previousMargin: '70px',
-    nextMargin: '70px',
-    currentSwiperIndex: 0,
+    // previousMargin: '70px',
+    // nextMargin: '70px',
+    currentSwiperIndex: 2,
+    number: 4,
   },
   // onShareAppMessage() {
   //   return config.shareData;
   // },
   swiperBindchange(e) {
+    const { current } = e.detail;
+    const { length } = this.data;
+    let index = 0;
+    if (current === length - 2) {
+      index = 0;
+    } else if (current === length - 1) {
+      index = 1;
+    } else {
+      index = e.detail.current + 2;
+    }
     this.setData({
-      currentSwiperIndex: e.detail.current,
+      currentSwiperIndex: index,
     });
   },
 });
