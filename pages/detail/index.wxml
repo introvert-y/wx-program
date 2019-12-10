@@ -1,2 +1,2 @@
 <view class="navigator" style="padding-top: {{distance}}px">测试自定义导航栏</view>
-<view class="name">详情页面</view>
+<view class="name" style="padding-top: {{distance + 45}}px">详情页面</view>

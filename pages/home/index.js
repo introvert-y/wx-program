@@ -21,11 +21,11 @@ Page({
     this.setData({
       startX: e.touches[0].clientX,
     });
-    // console.log('touchstart', e.touches[0].clientX);
+    console.log('touchstart', e.touches[0].clientX);
   },
-  touchend(e) {
+  touchmove(e) {
     const { startX, isShow } = this.data;
-    // console.log('touchend', e.changedTouches[0].clientX);
+    console.log('touchend', e.changedTouches[0].clientX);
     if (startX - e.changedTouches[0].clientX > 0 && !isShow) {
       console.log('显示');
       this.Show();
@@ -47,7 +47,6 @@ Page({
       isShow: false,
     });
   },
-
   queryTo() {
     // wx.navigateTo({
     //   url: '/pages/message/index',

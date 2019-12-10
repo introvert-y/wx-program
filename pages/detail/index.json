@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "测试加文本",
   "navigationStyle": "custom",
-  "navigationBarTextStyle": "white"
+  "enablePullDownRefresh": true,
+  "navigationBarTextStyle": "white",
+  "backgroundTextStyle": "light"
 }

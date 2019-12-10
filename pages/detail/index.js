@@ -8,7 +8,16 @@ Page({
     this.setData({
       distance: wx.getSystemInfoSync().statusBarHeight,
     });
-    console.log(wx.getSystemInfoSync().statusBarHeight);
+  },
+  onPullDownRefres() {
+    setTimeout(() => {
+      console.log('下拉刷新');
+    }, 3000);
+  },
+  onReachBottom() {
+    setTimeout(() => {
+      console.log('触底');
+    }, 3000);
   },
   // onShareAppMessage() {
   //   return config.shareData;

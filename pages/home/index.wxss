@@ -7,6 +7,7 @@ page button {
   align-items: center; */
   /* overflow: hidden;
   direction: ltr; */
+  /* margin-top: 800rpx; */
   width: 980rpx;
 }
 .practice {
