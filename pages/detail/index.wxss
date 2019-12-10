@@ -1,0 +1,7 @@
+.navigator {
+  height: 45px;
+  line-height: 45px;
+  padding-left: 10px;
+  color: #fff;
+  background-color: #377fee;  
+}
