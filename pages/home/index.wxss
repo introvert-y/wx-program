@@ -1,3 +1,35 @@
 page button {
-    margin-top: 40rpx;
+  margin-top: 40rpx;
+}
+
+.flex-box {
+  /* display: flex;
+  align-items: center; */
+  /* overflow: hidden;
+  direction: ltr; */
+  width: 980rpx;
+}
+.practice {
+  display: inline-block;
+  width: 750rpx;
+  background-color: #dedede;
+}
+.slide {
+    transition: all 0.5s;
+    transform: translate3d(-220rpx,0,0);
+}
+.slide-leave {
+    transition: all 0.5s;
+    transform: translate3d(0,0,0);
+}
+.box {
+  display: inline-block;
+  width: 220rpx;
+}
+.button {
+  display: inline-block;
+  vertical-align: top;
+  padding: 20rpx;
+  background-color: pink;
+  white-space: nowrap;
 }
