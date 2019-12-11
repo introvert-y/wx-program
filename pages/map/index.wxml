@@ -1,4 +1,4 @@
-<map id="myMap" longitude="{{longitude}}" latitude="{{latitude}}" polyline="{{polyline}}" markers="{{markers}}" scale="14" show-location include-points />
+<map id="myMap" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" show-scale scale="{{scale}}" show-location include-points bindregionchange="scaleChange" bindlabeltap="clickDot" bindmarkertap="clickMarker" bindtap="clickAnyDot" subkey="4GZBZ-ZFC2K-KSOJG-AHK22-YHMO6-CKFFZ" />
 <button type="primary" bindtap="getCenterLocation">获取位置</button>
 <button type="primary" bindtap="moveToLocation">移动位置</button>
 <button type="primary" bindtap="translateMarker">移动标注</button>
