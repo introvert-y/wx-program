@@ -1,2 +1,16 @@
 <view class="navigator" style="padding-top: {{distance}}px">测试自定义导航栏</view>
 <view class="name" style="padding-top: {{distance + 45}}px">详情页面</view>
+  <view class="item">
+    <picker
+      mode="multiSelector"
+      value="{{multiIndex}}"
+      range="{{multiArray}}"
+      bindchange="bindMultiPickerChange"
+      bindcolumnchange="bindMultiPickerColumnChange"
+    >
+     <view class="picker">
+       <!-- {{multiArray[0][multiIndex[0]] === '不限' ? '不限地区' : multiArray[0][multiIndex[0]]}} -->
+      当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+      </view>
+    </picker>
+  </view>

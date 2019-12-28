@@ -58,7 +58,7 @@ const collections = [
       anchorY: -52,
       content: '26\n东莞市',
       color: '#FFB6C1',
-      bgColor: '#ffffff',
+      bgColor: 'transparent',
       fontSize: 12,
       padding: 4,
       textAlign: 'center',
@@ -66,7 +66,7 @@ const collections = [
     iconPath: '../../img/map/yuanxing.png',
     width: 60,
     height: 60,
-    // zIndex: 100,
+    zIndex: 100,
   },
   {
     id: 1,
@@ -77,7 +77,7 @@ const collections = [
       anchorY: -52,
       content: '10\n佛山市',
       color: '#FFB6C1',
-      // bgColor: 'transparent',
+      bgColor: '#fff',
       fontSize: 12,
       padding: 4,
       textAlign: 'center',
@@ -91,18 +91,18 @@ const collections = [
 
 Page({
   data: {
-    scale: 9,
+    scale: 3,
     longitude: 113.32452,
     latitude: 23.099994,
     markers: [],
-    currentScale: 9,
+    currentScale: 3,
     isShow: true,
     currentMarker: {},
   },
   onLoad() {
     const that = this;
     this.setData({
-      markers: that.deepCopy(dotList),
+      markers: that.deepCopy(collections),
     });
   },
   onReady() {
@@ -148,7 +148,7 @@ Page({
       this.mapCtx.getScale({
         success(res) {
           console.log('当前的scale为：', res.scale);
-          if (res.scale > 6 && res.scale <= 8) {
+          if (res.scale <= 8) {
             // console.log('该聚合了');
             data.markers = that.deepCopy(collections);
             data.isShow = true;
@@ -172,7 +172,7 @@ Page({
     const { currentScale, markers, currentMarker } = this.data;
     if (currentScale > 6 && currentScale <= 8) {
       that.mapCtx.moveToLocation({
-        latitude: 22.931219,
+        latitude: 60.931219,
         longitude: 113.768192,
       });
       this.setData({
