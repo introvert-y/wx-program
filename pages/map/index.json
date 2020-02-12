@@ -1,1 +1,6 @@
-{}
+{
+  "component": true,
+  "usingComponents": {
+    "m-map": "../../components/m-map/index"
+  }
+}
