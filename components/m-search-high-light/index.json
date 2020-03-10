@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "m-name-high-light": "../m-name-high-light/index",
+    "m-shortName-high-light": "../m-shortName-high-light/index"
+  }
+}

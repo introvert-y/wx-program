@@ -81,6 +81,12 @@
 					"pathName": "pages/map/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "关键字高亮",
+					"pathName": "pages/keyWord/index",
+					"scene": null
 				}
 			]
 		}

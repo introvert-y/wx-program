@@ -1,0 +1,3 @@
+<view class="short-name">
+  <text>简称：</text><text wx:for="{{list}}" wx:key="id" class="{{item == keyWord ? 'highlight' : 'normal' }}">{{item}}</text>
+</view>

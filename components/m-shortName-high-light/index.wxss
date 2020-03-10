@@ -1,0 +1,9 @@
+.short-name {
+  font-size: 28rpx;
+}
+.highlight {
+  color: red;
+}
+.normal {
+  color: black;
+}

@@ -1,0 +1,4 @@
+<view class="item" wx:for="{{list}}" wx:key="id" >
+  <m-name-high-light str="{{item.name}}" key-word="{{keyWord}}" />
+  <m-shortName-high-light wx:if="{{item.shortName}}" str="{{item.shortName}}" key-word="{{keyWord}}" />
+</view>

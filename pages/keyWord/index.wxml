@@ -1,0 +1,3 @@
+<view class="name">关键字搜索</view>
+
+<m-search-high-light list="{{list}}" wx:key="id" key-word="{{keyWord}}" />

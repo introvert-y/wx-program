@@ -1,0 +1,9 @@
+.name {
+  font-size: 36rpx;
+}
+.highlight {
+  color: red;
+}
+.normal {
+  color: black;
+}

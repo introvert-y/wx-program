@@ -1,0 +1,3 @@
+<view class="name">
+  <text wx:for="{{list}}" wx:key="id" class="{{item == keyWord ? 'highlight' : 'normal' }}">{{item}}</text>
+</view>
