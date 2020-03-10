@@ -1,0 +1,66 @@
+.pm-share_modal {
+  position: relative;
+  padding-bottom: 10rpx;
+}
+
+.pm-share_modal .head {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #212732;
+  text-align: left;
+}
+
+.pm-share_modal .share_box {
+  width: 370rpx;
+  margin: 40rpx auto 0;
+  padding: 14rpx 20rpx 10rpx;
+  box-sizing: border-box;
+  border-radius: 8rpx;
+  border: solid 2rpx #e6e6e6;
+}
+
+.pm-share_modal .ttl {
+  font-size: 28rpx;
+  color: #212732;
+  text-align: left;
+}
+
+.pm-share_modal .pic {
+  display: block;
+  width: 330rpx;
+  height: 266rpx;
+  margin: 14rpx auto 0;
+}
+
+.pm-share_modal .flag {
+  display: block;
+  width: 106rpx;
+  height: 24rpx;
+  margin-top: 10rpx;
+}
+
+.pm-share_modal .next_btn {
+  display: block;
+  padding: 0;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 12rpx;
+  background: #60c48e;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 44rpx;
+  border: 0;
+}
+
+.pm-share_modal .next_btn::after {
+  display: none;
+}
+
+.pm-share_modal .close_btn {
+  position: absolute;
+  top: -35rpx;
+  right: -20rpx;
+  width: 80rpx;
+  height: 80rpx;
+}

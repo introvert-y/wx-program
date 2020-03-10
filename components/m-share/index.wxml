@@ -1,0 +1,12 @@
+<m-modal hide-action bind:cancel="onModalCancel">
+  <view class="pm-share_modal">
+    <view class="head">邀请公司职员</view>
+    <view class="share_box">
+      <view class="ttl">xc的测试公司邀请你填写xxxx</view>
+      <image class="pic" src="../../img/share/antiepidemic-pic-share@3x.png" />
+      <image class="flag" src="../../img/share/antiepidemic-mark@3x.png" />
+    </view>
+    <button class="next_btn" open-type="share" catch:tap="next">下一步</button>
+    <image class="close_btn" src="../../img/share/delete-people@3x.png" bind:tap="onModalCancel" />
+  </view>
+</m-modal>

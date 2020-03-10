@@ -1,0 +1,52 @@
+<view class="m-modal" bindtap="onBackgroundTap">
+  <view class="main" catchtap="onMainTap" style='{{moveTop? "margin-top:"+moveTop:""}}'>
+    <view class="title" wx:if="{{title}}">{{title}}</view>
+    <view class="content">
+      <slot></slot>
+    </view>
+    <view class="actions" wx:if="{{!hideAction}}">
+      <button
+        class="btn cancel"
+        hidden="{{!showCancel}}"
+        style="color: {{cancelColor}}"
+        data-info="btn"
+        catchtap="cancel"
+      >{{cancelText}}</button>
+      <button
+        class="btn confirm{{showCancel ? ' f-bdl' : ' f-full'}}"
+        style="color: {{confirmColor}}"
+        wx:if="{{confirmType === 'getUserInfo'}}"
+        open-type="getUserInfo"
+        data-info="btn"
+        data-btn="confirm"
+        bindgetuserinfo="onGetUserInfo"
+      >{{confirmText}}</button>
+      <button
+        class="btn confirm{{showCancel ? ' f-bdl' : ' f-full'}}"
+        style="color: {{confirmColor}}"
+        wx:elif="{{confirmType === 'getPhoneNumber'}}"
+        open-type="getPhoneNumber"
+        data-info="btn"
+        data-btn="confirm"
+        bindgetphonenumber="onGetPhoneNumber"
+      >{{confirmText}}</button>
+      <button
+        class="btn confirm{{showCancel ? ' f-bdl' : ' f-full'}}"
+        style="color: {{confirmColor}}"
+        wx:elif="{{confirmType === 'share'}}"
+        open-type="share"
+        data-info="btn"
+        data-btn="confirm"
+        catchtap="confirm"
+      >{{confirmText}}</button>
+      <button
+        class="btn confirm{{showCancel ? ' f-bdl' : ' f-full'}}"
+        style="color: {{confirmColor}}"
+        catchtap="confirm"
+        data-info="btn"
+        data-btn="confirm"
+        wx:else
+      >{{confirmText}}</button>
+    </view>
+  </view>
+</view>

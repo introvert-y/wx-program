@@ -1,0 +1,65 @@
+.m-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.m-modal .main {
+  width: 560rpx;
+  border-radius: 8rpx;
+  background-color: #ffffff;
+  padding-top: 50rpx;
+}
+
+.m-modal .title {
+  margin-bottom: 30rpx;
+  text-align: center;
+  color: #212732;
+  font-weight: bold;
+  font-size: 36rpx;
+}
+
+.m-modal .content {
+  padding: 0 40rpx 30rpx;
+  font-size: 30rpx;
+  color: #212732;
+  text-align: center;
+}
+
+.m-modal .actions {
+  border-top: 2rpx solid #e5e5e5;
+  display: flex;
+}
+
+.m-modal .actions .btn {
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  font-size: 36rpx;
+  color: #212732;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+
+.m-modal .actions .btn.f-full {
+  width: 100%;
+}
+
+.m-modal .actions .btn.f-bdl {
+  border-left: 2rpx solid #e5e5e5;
+}
+
+.m-modal .actions .btn:after {
+  border: 0;
+}

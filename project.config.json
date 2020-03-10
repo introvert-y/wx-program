@@ -86,6 +86,14 @@
 					"id": -1,
 					"name": "关键字高亮",
 					"pathName": "pages/keyWord/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "子组件触发页面的分享",
+					"pathName": "pages/shareTest/index",
+					"query": "",
 					"scene": null
 				}
 			]
