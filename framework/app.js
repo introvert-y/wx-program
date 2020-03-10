@@ -6,12 +6,11 @@ module.exports = (options = {}) => {
     onLaunch(...res) {
       const opts = res[0];
       this.$opts = opts;
-      console.log('App option:', opts);
       if (onLaunch) {
         onLaunch.apply(this, res);
       }
     },
   };
-  const newOptions = Object.assign({}, options, patchOptions);
+  const newOptions = Object.assign(options, patchOptions);
   return app(newOptions);
 };

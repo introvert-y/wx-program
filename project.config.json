@@ -63,13 +63,6 @@
 				},
 				{
 					"id": -1,
-					"name": "个人中心",
-					"pathName": "pages/user_center/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
 					"name": "走马灯",
 					"pathName": "pages/carousel/index",
 					"query": "",

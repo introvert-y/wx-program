@@ -15,7 +15,7 @@ module.exports = (options = {}) => {
       this.$opts = opts;
       this.$optData = optData;
       console.log('Page $optData:', optData);
-      console.log('Page $opts:', opts);
+      // console.log('Page $opts:', opts);
       /**
        * 拦截后再暴露出去，缺少这步则会拦截所有的onLoad方法
        */

@@ -2,6 +2,7 @@
   "navigationBarTitleText": "测试加文本",
   "navigationStyle": "custom",
   "enablePullDownRefresh": true,
+  "backgroundColor": "#000c39",
   "navigationBarTextStyle": "white",
   "backgroundTextStyle": "light"
 }

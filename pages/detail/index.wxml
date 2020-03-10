@@ -1,2 +1,5 @@
-<view class="navigator" style="padding-top: {{distance}}px">测试自定义导航栏</view>
+<view class="navigator flex-box" style="padding-top: {{distance}}px">
+  <image class="back-icon" bindtap="back" src="../../img/nav/next-white@3x.png" />
+  测试自定义导航栏
+</view>
 <view class="name" style="padding-top: {{distance + 45}}px">详情页面</view>

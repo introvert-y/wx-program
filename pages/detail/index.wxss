@@ -1,6 +1,10 @@
 page {
   background-color: #dedede;
 }
+.flex-box {
+  display: flex;
+  align-items: center;
+}
 .navigator {
   position: absolute;
   top: 0;
@@ -8,7 +12,13 @@ page {
   right: 0;
   height: 45px;
   line-height: 45px;
-  padding-left: 10px;
   color: #fff;
   background-color: rgba(255,0,0,1);  
+}
+.back-icon {
+  padding: 20rpx;
+  width: 20rpx;
+  height: 36rpx;
+  transform: rotate(180deg);
+  z-index: 30;
 }
