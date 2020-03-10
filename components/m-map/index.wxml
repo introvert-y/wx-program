@@ -1,0 +1,8 @@
+<map id="myMap" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" show-scale scale="{{scale}}" show-location include-points bindregionchange="scaleChange" bindlabeltap="clickLabel" bindmarkertap="clickMarker" bindtap="clickAnyDot" subkey="4GZBZ-ZFC2K-KSOJG-AHK22-YHMO6-CKFFZ">
+  <!-- <cover-view class="cover-container"> -->
+  <cover-view class="bottom">
+    底部搜索栏
+    <cover-view class="content" hidden="{{isShow}}">{{currentMarker.label.content}}</cover-view>
+  </cover-view>
+  <!-- </cover-view> -->
+</map>
