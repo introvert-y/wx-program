@@ -9,7 +9,8 @@
     "pages/carousel/index",
     "pages/keyWord/index",
     "pages/shareTest/index",
-    "pages/map/index"
+    "pages/observes/index",
+    "pages/electronic_fence/index"
   ],
   "tabBar": {
     "borderStyle": "white",

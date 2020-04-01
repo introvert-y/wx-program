@@ -5,7 +5,7 @@ Page({
     distance: 0,
   },
   onLoad() {
-    console.log('测试', this.$opts.name, this.$optData.name);
+    console.log('测试', this.$opts, this.$optData);
     this.setData({
       name: this.$opts.name || this.$optData.name,
     });

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "m-map-circle": "../../components/m-map-circle/index",
+    "m-map-line": "../../components/m-map-line/index",
+    "m-map-polygon": "../../components/m-map-polygon/index"
+
+  }
+}

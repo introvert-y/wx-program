@@ -1,0 +1,18 @@
+<map
+  id="map"
+  class="myMap"
+  longitude="{{longitude}}"
+  latitude="{{latitude}}"
+  scale="18"
+  circles="{{circles}}"
+  bindcontroltap="controltap"
+  markers="{{markers}}"
+  bindmarkertap="markertap"
+  polyline="{{polyline}}"
+  show-location
+  enable-scroll
+  bindregionchange="regionchange"
+  bindtap="click"
+>
+</map>
+<!-- <cover-view class="mask_circle"></cover-view> -->

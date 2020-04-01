@@ -1,0 +1,10 @@
+
+<cover-view class="select_box">
+  <cover-view class="item" data-info="{{optionMap.circle}}" bindtap="changeCrt">圆</cover-view>
+  <cover-view class="item" data-info="{{optionMap.line}}" bindtap="changeCrt">线</cover-view>
+  <cover-view class="item" data-info="{{optionMap.polygon}}" bindtap="changeCrt">多边形</cover-view>
+</cover-view>
+
+<m-map-circle wx:if="{{optionMap.circle === crt}}" />
+<m-map-line wx:elif="{{optionMap.line === crt}}" />
+<m-map-polygon wx:else />

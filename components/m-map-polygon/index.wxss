@@ -1,0 +1,14 @@
+.myMap {
+  width: 100%;
+  height: 100vh;
+}
+.clear_polygons {
+  position: fixed;
+  bottom: 200rpx;
+  right: 0;
+  padding: 20rpx;
+  font-size: 32rpx;
+  color: black;
+  background-color: #fff;
+  border: 6rpx solid red;
+}

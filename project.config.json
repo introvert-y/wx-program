@@ -69,13 +69,6 @@
 					"scene": null
 				},
 				{
-					"id": 3,
-					"name": "地图组件的实践",
-					"pathName": "pages/map/index",
-					"query": "",
-					"scene": null
-				},
-				{
 					"id": -1,
 					"name": "关键字高亮",
 					"pathName": "pages/keyWord/index",
@@ -86,6 +79,20 @@
 					"id": 5,
 					"name": "子组件触发页面的分享",
 					"pathName": "pages/shareTest/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "监听组件属性",
+					"pathName": "pages/observes/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "电子围栏",
+					"pathName": "pages/electronic_fence/index",
 					"query": "",
 					"scene": null
 				}

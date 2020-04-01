@@ -1,0 +1,11 @@
+var applyFormTypeMap = {
+  check: '00',
+  agree: '01',
+  reject: '02',
+  reset: '03',
+};
+
+
+module.exports = {
+  applyFormTypeMap: applyFormTypeMap,
+};

@@ -1,0 +1,12 @@
+<wxs src="../../wxs/join_company.wxs" module="joinCompanyUtils"></wxs>
+
+<template name="test">
+<view style="margin-bottom: 20rpx;">
+测试wxs的wxml穿透
+{{joinCompanyUtils.applyFormTypeMap.check}}
+</view>
+</template>
+
+<template is="test"></template>
+
+<m-test-observes />

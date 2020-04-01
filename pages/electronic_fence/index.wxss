@@ -1,0 +1,20 @@
+.select_box {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 2rpx solid red;
+  z-index: 100;
+}
+.select_box .item {
+  width: 100rpx;
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  background-color: #fff;
+  color: black;
+  border-bottom: 2rpx solid red;
+}
+.select_box .item:last-child {
+  border-bottom: none;
+}

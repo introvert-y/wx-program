@@ -1,5 +1,5 @@
 <view class="name">hello world</view>
-<button bindtap="navigate" data-info="{{ {name: 'detail', query: {name: 'Anny'} } }}">
+<button bindtap="navigate" data-info="{{ {name: 'detail', query: {name: 'Anny', joinStatus: false, count: 3} } }}">
   query传参
 </button>
 <button bindtap="navigate" data-info="{{ {name: 'detail', data: {name: 'Ming'} } }}">data传参</button>
