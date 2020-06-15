@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "m-async-await": "../../components/m-async-await/index"
+  }
+}

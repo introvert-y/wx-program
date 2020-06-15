@@ -10,6 +10,7 @@
     "pages/keyWord/index",
     "pages/shareTest/index",
     "pages/observes/index",
+    "pages/await/index",
     "pages/electronic_fence/index"
   ],
   "tabBar": {

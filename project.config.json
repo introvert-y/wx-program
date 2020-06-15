@@ -6,19 +6,27 @@
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
+		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
 		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
 		"babelSetting": {
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		}
+		},
+		"useIsolateContext": true,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.3",
@@ -94,6 +102,12 @@
 					"name": "电子围栏",
 					"pathName": "pages/electronic_fence/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "异步处理",
+					"pathName": "pages/await/index",
 					"scene": null
 				}
 			]
