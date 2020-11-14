@@ -17,10 +17,10 @@ Page({
     });
   },
   touchstart(e) {
+    console.log('touchstart', e.touches[0].clientX);
     this.setData({
       startX: e.touches[0].clientX,
     });
-    // console.log('touchstart', e.touches[0].clientX);
   },
   touchmove(e) {
     const { startX, isShow } = this.data;

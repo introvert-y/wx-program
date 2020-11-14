@@ -1,0 +1,84 @@
+var newmark = startmark = 0
+var status = 0
+var lastX = 0
+
+function touchstart(e, ins) {
+  var pageX = (e.touches[0] || e.changedTouches[0]).pageX
+  startmark = newmark = pageX
+  console.log('status', status);
+}
+function touchmove(e, ins) {
+  var pageX = (e.touches[0] || e.changedTouches[0]).pageX
+  newmark = pageX
+  // var data = ins.getData()
+  var data = {
+    windowWidth: e.target.dataset.width
+  }
+  var rightBorder = Math.floor(data.windowWidth * 0.75);
+
+  if (startmark < pageX) {
+    if (lastX === rightBorder) {
+      console.log('静止');
+      return;
+    }
+    if (rightBorder > Math.abs(newmark - startmark)) {
+      // console.log(111, JSON.stringify(event), context.newmark - context.startmark)
+      console.log('move', (newmark - startmark), (lastX + newmark - startmark));
+      ins.selectComponent('.page-top').setStyle({
+        transform: 'translateX(' + Math.floor(Math.min(rightBorder, (lastX + newmark - startmark))) + 'px)'
+      })
+    }
+  }
+  if (startmark > pageX) {
+    console.log('move 向左滑动了', newmark - startmark)
+    ins.selectComponent('.page-top').setStyle({
+      transform: 'translateX(' +  Math.floor(Math.max(0, (lastX + newmark - startmark))) + 'px)'
+    })
+  }
+}
+function touchend(e, ins) {
+  var pageX = (e.touches[0] || e.changedTouches[0]).pageX
+  newmark = pageX
+  console.log('touchend', pageX);
+  // var data = ins.getData()
+  var data = {
+    windowWidth: e.target.dataset.width
+  }
+  var rightBorder = Math.floor(data.windowWidth * 0.75);
+
+  if (startmark < pageX && (lastX < rightBorder)) {
+    if (rightBorder > Math.abs(newmark - startmark)) {
+      ins.selectComponent('.page-top').setStyle({
+        transform: 'translateX(' +  Math.floor(Math.min(rightBorder, (lastX + newmark - startmark))) + 'px)'
+      })
+      status = Math.min(rightBorder, (lastX + newmark - startmark)) === rightBorder ? 1 : 0;
+      console.log('lastX > conditions?', lastX, Math.floor(rightBorder))
+      if (lastX >  Math.floor((rightBorder))) {
+        lastX = rightBorder;
+        return;
+      }
+      lastX = Math.min(lastX + Math.floor(newmark - startmark), rightBorder);
+      console.log('向右1111 last', lastX);
+    }
+  }
+  if (startmark > newmark) {
+    console.log('end 向左滑动了')
+    ins.selectComponent('.page-top').setStyle({
+      transform: 'translateX(' +  Math.floor(Math.max(0, (lastX + newmark - startmark))) + 'px)'
+    })
+    status = Math.min(rightBorder, (lastX + newmark - startmark)) === rightBorder ? 1 : 0;
+    if (lastX < 0) {
+      lastX = 0;
+      return;
+    }
+    lastX +=  Math.floor(newmark - startmark)
+    console.log('向左 last', lastX);
+
+  }
+
+}
+module.exports = {
+  touchstart: touchstart,
+  touchmove: touchmove,
+  touchend: touchend
+}

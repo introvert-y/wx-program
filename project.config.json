@@ -90,17 +90,21 @@
           "scene": null
         },
         {
-          "id": 5,
-          "name": "电子围栏",
-          "pathName": "pages/electronic_fence/index",
-          "query": "",
-          "scene": null
-        },
-        {
           "id": -1,
           "name": "异步处理",
           "pathName": "pages/await/index",
           "query": "",
+          "scene": null
+        },
+        {
+          "name": "上滑吸顶",
+          "pathName": "pages/stick_top/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "侧边栏",
+          "pathName": "pages/sidebar/index",
           "scene": null
         }
       ]

@@ -9,6 +9,8 @@
     "pages/carousel/index",
     "pages/key_word/index",
     "pages/observes/index",
+    "pages/stick_top/index",
+    "pages/sidebar/index",
     "pages/await/index"
   ],
   "tabBar": {
