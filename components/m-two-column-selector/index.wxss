@@ -1,0 +1,52 @@
+.picker_box {
+  position: relative;
+  display: flex;
+  background-color: #fff;
+  z-index: 5;
+}
+
+.picker_box .picker {
+  flex-grow: 1;
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  height: 96rpx;
+  font-size: 30rpx;
+  color: #717882;
+}
+
+.picker_box .picker.z-crt {
+  color: #212732;
+}
+
+.picker_box .picker.z-crt .arr {
+  transform: rotate(180deg);
+}
+
+.picker_box .picker .arr {
+  border: 10rpx solid #717882;
+  border-bottom: 0;
+  border-left-color: #fff;
+  border-right-color: #fff;
+  margin-left: 12rpx;
+  margin-top: 5rpx;
+}
+
+.opt_box {
+  position: absolute;
+  top: 96rpx;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 96rpx;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 3;
+}

@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "m-test-observes": "../../components/m-test-observes/index"
+    "m-observes": "../../components/m-observes/index"
   }
 }

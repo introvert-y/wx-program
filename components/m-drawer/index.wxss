@@ -1,0 +1,68 @@
+.m-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.m-drawer.z-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.m-drawer.z-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.m-drawer.z-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.m-drawer.z-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.m-drawer.z-bottom .box {
+  border-radius: 16rpx 16rpx 0 0;
+  padding: 40rpx;
+  -webkit-animation: drawerSlideInUp 0.3s ease-out;
+  animation: drawerSlideInUp 0.3s ease-out;
+}
+
+.m-drawer.z-bottom .box .close_btn {
+  top: 20rpx;
+  right: 40rpx;
+}
+
+.m-drawer .box {
+  position: relative;
+  background-color: #fff;
+}
+.m-drawer .title {
+  color: #212732;
+  font-size: 32rpx;
+  margin-top: -20rpx;
+  height: 64rpx;
+  line-height: 64rpx;  
+}
+.m-drawer .title.txt_bold {
+  font-weight: bold;
+}
+
+.m-drawer .box .close_btn {
+  position: absolute;
+  width: 48rpx;
+  height: 64rpx;
+}
+
+.m-drawer .box .body {
+  position: relative;
+}

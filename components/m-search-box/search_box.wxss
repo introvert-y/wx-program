@@ -1,0 +1,67 @@
+.search_box {
+  height: 110rpx;
+  background-color: #fff;
+}
+
+.search_box .fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.search_box .form {
+  padding: 20rpx 0;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+
+.search_box .form .ipt_wrap {
+  display: flex;
+  align-items: center;
+  height: 70rpx;
+  border-radius: 8rpx;
+  background-color: #f3f3f7;
+}
+
+.search_box .form .ipt_wrap .icon {
+  flex-shrink: 0;
+  display: block;
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 10rpx;
+  margin-left: 20rpx;
+}
+
+.search_box .form .ipt_wrap .ipt {
+  display: block;
+  flex-grow: 1;
+  font-size: 30rpx;
+}
+
+.search_box .form .ipt_wrap .input-placeholder {
+  color: #c0c4cb;
+}
+
+.search_box .form .ipt_wrap .txt {
+  color: #c0c4cb;
+  font-size: 30rpx;
+}
+
+.search_box .form .ipt_wrap .empty_btn {
+  flex-shrink: 0;
+  display: block;
+  width: 68rpx;
+  height: 68rpx;
+  margin-right: 12rpx;
+}
+
+.search_box.z-init .form .ipt_wrap .empty_btn {
+  display: none;
+}
+
+/* .search_box.z-init .form .ipt_wrap .icon {
+  margin-left: 190rpx;
+} */

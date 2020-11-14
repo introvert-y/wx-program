@@ -1,0 +1,45 @@
+
+<template name="picker">
+<view
+  class="picker {{crtPicker === type ? ' z-crt' : ''}}"
+  data-info="{{type}}"
+  catchtap="togglePicker"
+ >
+  <view class="label limit">{{label}}</view>
+  <view class="arr"></view>
+</view>
+</template>
+
+<view class="picker_box">
+  <template
+    is="picker"
+    data="{{type: 'firstTypePicker', crtPicker, label: firstTypePicker.label}}"
+  />
+  <template
+    is="picker"
+    data="{{type: 'secondTypePicker', crtPicker, label: secondTypePicker.label}}"
+  />
+  <view class="opt_box" hidden="{{crtPicker !== 'firstTypePicker'}}">
+    <pm-monolayer-picker
+      range="{{firstTypePicker.range}}"
+      value="{{firstTypePicker.value}}"
+      bindchange="onFirstColumnTypeChange"
+    />
+  </view>
+  <view class="opt_box" hidden="{{crtPicker !== 'secondTypePicker'}}">
+    <pm-monolayer-picker
+      range="{{secondTypePicker.range}}"
+      value="{{secondTypePicker.value}}"
+      bindchange="onSecondColumnTypeChange"
+    />
+  </view>
+  <view
+    class="overlay"
+    wx:if="{{crtPicker}}"
+    bindtap="closePicker"
+    catchtouchmove="preventTouchMove"
+  />
+</view>
+
+
+

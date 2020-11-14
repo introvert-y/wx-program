@@ -9,4 +9,4 @@
 
 <template is="test"></template>
 
-<m-test-observes />
+<m-observes />

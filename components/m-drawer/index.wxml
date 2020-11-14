@@ -1,0 +1,23 @@
+<view
+  class="m-drawer z-{{placement}}"
+  style="{{containerStyle}}"
+  bindtap="onBgTap"
+  catch:touchmove="onBgTouchMove"
+>
+  <view
+    class="box"
+    catch:tap="onBoxTap"
+    style="{{boxStyle}}"
+  >
+    <view class="title" wx:if="{{title}}" style="{{titleStyle}}">{{title}}</view>
+    <view class="body">
+      <slot />
+    </view>
+    <image
+      class="close_btn"
+      bindtap="close"
+      src="../../img/components/m-drawer/delete-people@3x.png"
+      wx:if="{{!hideCloseBtn}}"
+    />
+  </view>
+</view>

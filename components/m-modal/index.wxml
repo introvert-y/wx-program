@@ -48,5 +48,12 @@
         wx:else
       >{{confirmText}}</button>
     </view>
+    <image
+      class="close_btn"
+      src="../..//img/components/m-modal/gray@3x.png"
+      data-info="close_btn"
+      bindtap="cancel"
+      wx:if="{{closeBtn}}"
+    />
   </view>
 </view>

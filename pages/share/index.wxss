@@ -1,0 +1,4 @@
+.btn {
+  margin-top: 40rpx;
+  border: 2rpx solid black;
+}

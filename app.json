@@ -8,10 +8,9 @@
     "pages/diagram/index",
     "pages/carousel/index",
     "pages/keyWord/index",
-    "pages/shareTest/index",
+    "pages/share/index",
     "pages/observes/index",
-    "pages/await/index",
-    "pages/electronic_fence/index"
+    "pages/await/index"
   ],
   "tabBar": {
     "borderStyle": "white",
@@ -25,7 +24,7 @@
         "pagePath": "pages/home/index",
         "text": "首页"
       },
-      { 
+      {
         "iconPath": "img/tab/xiaoxi.png",
         "selectedIconPath": "img/tab/xiaoxi_select.png",
         "pagePath": "pages/message/index",
@@ -37,7 +36,7 @@
         "pagePath": "pages/diagram/index",
         "text": "图表"
       },
-      { 
+      {
         "iconPath": "img/tab/wode.png",
         "selectedIconPath": "img/tab/wode_select.png",
         "pagePath": "pages/user_center/index",

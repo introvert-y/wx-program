@@ -1,15 +1,19 @@
-<view class="name">hello world</view>
-<button bindtap="navigate" data-info="{{ {name: 'detail', query: {name: 'Anny', joinStatus: false, count: 3} } }}">
+<view class="tip">
+  query传参跟data传参的区别是query传参中
+  的key：value中的value会被转义成字符串,
+  例如（flag: false)会被转义成（flag: 'false')。
+  而data传参是由我们手动封装了一层，通过拦截注入的形式
+  在路由跳转前把参数JSON.stringify，在进入页面前再JSON.parse转回最初的数据。解决了转义的问题
+</view>
+<button bindtap="navigate" data-info="{{ {name: 'detail', query: { name: 'Anny', joinStatus: false, count: 3 } } }}">
   query传参
 </button>
-<button bindtap="navigate" data-info="{{ {name: 'detail', data: {name: 'Ming'} } }}">data传参</button>
-<button bindtap="navigate" data-info="{{ {name: 'message', data: {name: '11111'} } }}">
-  跳转至Tab页
-</button>
+<button bindtap="navigate" data-info="{{ {name: 'detail', data: { name: 'Anny', joinStatus: false, count: 3 } } }}">data传参</button>
+
 <!-- 承载网页的容器。会自动铺满整个小程序页面，个人类型的小程序暂不支持使用。 -->
 <button bindtap="navigate" data-info="{{ faq.route }}">跳转外部</button>
 <!-- 两个div连着，左滑通过方法左移，左滑一点就显示一点 -->
-<view 
+<view
   class="flex-box {{isShow ? 'slide' : 'slide-leave'}}"
   bindtouchstart="touchstart"
   bindtouchmove="touchmove"
@@ -22,14 +26,4 @@
     <text class="button">删除</text>
     <text class="button">置顶</text>
   </view>
-</view>
- <view class="container">
-     <view class='progress_box'>
-        <canvas class="progress_bg"   canvas-id="canvasProgressbg">  </canvas> 
-        <canvas class="progress_canvas"   canvas-id="canvasProgress">  </canvas> 
-        <view class="progress_text">
-            <view class="progress_dot"></view> 
-            <text class='progress_info'> {{progress_txt}}</text>
-        </view>     
-    </view>
 </view>

@@ -1,0 +1,9 @@
+
+<scroll-view scroll-y class="picker">
+  <view class="list">
+    <view class="item{{index === value ? ' z-checked' : ''}}" data-info="{{index}}" bindtap="pick" wx:for="{{range}}" wx:key="id">
+      <view class="label">{{item.label}}</view>
+      <image class="picked" src="../../img/components/m-monolayer-menu/choose-current@3x.png" />
+    </view>
+  </view>
+</scroll-view>

@@ -1,116 +1,102 @@
 {
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"enhance": true,
-		"postcss": true,
-		"preloadBackgroundData": false,
-		"minified": true,
-		"newFeature": true,
-		"coverView": true,
-		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"compileHotReLoad": false,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		},
-		"useIsolateContext": true,
-		"useCompilerModule": false,
-		"userConfirmedUseCompilerModuleSwitch": true
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.9.3",
-	"appid": "wxac55fdca11d2054a",
-	"projectname": "wx-program",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": -1,
-			"list": [
-				{
-					"id": -1,
-					"name": "图表",
-					"pathName": "pages/diagram/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "走马灯",
-					"pathName": "pages/carousel/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "关键字高亮",
-					"pathName": "pages/keyWord/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 5,
-					"name": "子组件触发页面的分享",
-					"pathName": "pages/shareTest/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "监听组件属性",
-					"pathName": "pages/observes/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 5,
-					"name": "电子围栏",
-					"pathName": "pages/electronic_fence/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "异步处理",
-					"pathName": "pages/await/index",
-					"scene": null
-				}
-			]
-		}
-	}
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": false,
+    "userConfirmedUseCompilerModuleSwitch": true,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.9.3",
+  "appid": "wxac55fdca11d2054a",
+  "projectname": "wx-program",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "图表",
+          "pathName": "pages/diagram/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "走马灯",
+          "pathName": "pages/carousel/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "关键字高亮",
+          "pathName": "pages/keyWord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "子组件触发页面的分享",
+          "pathName": "pages/share/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "监听组件属性",
+          "pathName": "pages/observes/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "异步处理",
+          "pathName": "pages/await/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

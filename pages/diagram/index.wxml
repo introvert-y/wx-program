@@ -1,3 +1,2 @@
 <view class="title">柱形图实现了移动端自适应</view>
 <m-bar-chart />
-<m-map-chart />

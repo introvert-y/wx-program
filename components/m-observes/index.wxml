@@ -1,0 +1,8 @@
+<view class="name">
+{{numberA}}
++
+{{numberB}}
+=
+{{num}}
+
+</view>

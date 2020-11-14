@@ -1,0 +1,16 @@
+<view class="m-action-sheet" bindtap="onBgTap">
+  <view class="main" style="{{bodyStyle}}">
+    <scroll-view scroll-y class="items">
+      <view class="list">
+        <view
+          class="item"
+          data-info="{{index}}"
+          catchtap="onItemTap"
+          wx:for="{{itemList}}"
+          wx:key="id"
+        >{{item}}</view>
+      </view>
+    </scroll-view>
+    <view class="cancel" catchtap="cancel">取消</view>
+  </view>
+</view>

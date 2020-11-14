@@ -1,0 +1,27 @@
+<view class="search_box{{search.init ? ' z-init' : ''}}">
+  <view class="{{fixed ? 'fixed' : ''}}">
+    <view class="form">
+      <view class="ipt_wrap" bindtap="onSearchFocus">
+        <image class="icon" src="../../img/components/search@3x.png" style="margin-left: {{search.init && iconMarginLeft ? iconMarginLeft : 20}}rpx" />
+        <view class="ipt input-placeholder" wx:if="{{allwayNoChange}}">{{placeholder}}</view>
+        <input
+          wx:else
+          class="ipt"
+          value="{{search.initVal}}"
+          bindinput="onSearchInput"
+          placeholder-class="input-placeholder"
+          placeholder="{{placeholder}}"
+          bindfocus="onSearchFocus"
+          bindblur="onSearchBlur"
+          focus="{{!search.init}}"
+        />
+        <image
+          class="empty_btn"
+          wx:if="{{search.val}}"
+          bindtap="emptySearch"
+          src="../../img/components/search-clean@3x.png"
+        />
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,5 +1,0 @@
-.chart {
-  height: 500rpx;
-  width: 100%;
-  background-color: #dedede;
-}

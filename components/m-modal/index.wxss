@@ -12,6 +12,7 @@
 }
 
 .m-modal .main {
+  position: relative;
   width: 560rpx;
   border-radius: 8rpx;
   background-color: #ffffff;
@@ -62,4 +63,12 @@
 
 .m-modal .actions .btn:after {
   border: 0;
+}
+
+.m-modal .close_btn {
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  width: 80rpx;
+  height: 80rpx;
 }

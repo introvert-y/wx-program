@@ -41,6 +41,10 @@ Component({
       type: Boolean,
       value: true,
     },
+    closeBtn: {
+      type: Boolean,
+      value: false,
+    },
   },
   methods: {
 

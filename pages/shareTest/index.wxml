@@ -1,8 +1,0 @@
-<view class="txt">子组件里点击分享按钮,触发父组件的分享事件onShareAppMessage</view>
-<button class="btn" bindtap="toggleModal">显示子组件</button>
-<m-share
-  wx:if="{{inviteModal.status}}"
-  bind:cancel="toggleModal"
-  bind:data="getShareData"
-  bind:next="toggleModal"
-/>

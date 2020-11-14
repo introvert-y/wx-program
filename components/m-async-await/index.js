@@ -1,6 +1,7 @@
 
 function mockDelay() {
   return new Promise((res) => {
+    console.log('mockDelay');
     setTimeout(() => {
       console.log('2s后');
       res();
