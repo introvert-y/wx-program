@@ -1,0 +1,52 @@
+.m-auditors_box {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 50rpx;
+  background-color: #fff;
+}
+
+.m-auditors_box .label {
+  flex-grow: 1;
+  font-size: 32rpx;
+  color: #212732;
+}
+
+.m-auditors_box .label .b {
+  font-weight: bold;
+}
+
+.m-auditors_box .label .r {
+  font-size: 28rpx;
+  color: #858b96;
+  margin-top: 10rpx;
+}
+
+.m-auditors_box .users {
+  display: flex;
+}
+
+.m-auditors_box .users .split {
+  color: #858b96;
+  font-size: 28rpx;
+  padding: 0 10rpx;
+  margin-top: 32rpx;
+}
+
+.m-auditors_box .user .avt {
+  display: block;
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 100%;
+  margin: auto;
+}
+
+.m-auditors_box .user .name {
+  width: 120rpx;
+  font-size: 28rpx;
+  color: #858b96;
+  margin-top: 10rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

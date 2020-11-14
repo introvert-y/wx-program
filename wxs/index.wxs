@@ -1,0 +1,6 @@
+
+module.exports = {
+  defaultAvt: '../img/default-face.png',
+  defaultLogo: '../img/default_company@3x.png',
+  formArrowPath: '../img/gray@3x.png',
+};

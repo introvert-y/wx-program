@@ -1,0 +1,9 @@
+var typeMap = {
+  COMMON: 'common',
+  BLACKLIST: 'blacklist',
+  ATTENDANCE: 'attendance',
+};
+
+module.exports = {
+  typeMap: typeMap,
+};

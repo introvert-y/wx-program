@@ -7,8 +7,7 @@
     "pages/webview/help/index",
     "pages/diagram/index",
     "pages/carousel/index",
-    "pages/keyWord/index",
-    "pages/share/index",
+    "pages/key_word/index",
     "pages/observes/index",
     "pages/await/index"
   ],

@@ -1,0 +1,24 @@
+<wxs src="../../wxs/index.wxs" module="utils"></wxs>
+
+<view class="m-auditors_box">
+  <view class="label">
+    <view class="b">审核人</view>
+    <view class="r">或签</view>
+  </view>
+  <view class="users">
+    <block wx:if="{{total >= 3}}">
+    <view class="user" bindtap="showAll">
+      <image class="avt" src="../../img/components/m-auditors-box/approvers@3x.png" />
+      <view class="name">查看全部</view>
+    </view>
+    <view class="split">/</view>
+    </block>
+    <block wx:for="{{list}}" wx:key="id">
+      <view class="split" wx:if="{{index !== 0}}">/</view>
+      <view class="user">
+        <image class="avt" src="{{item.img || utils.defaultAvt}}" />
+        <view class="name">{{item.name}}</view>
+      </view>
+    </block>
+  </view>
+</view>
