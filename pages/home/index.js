@@ -17,7 +17,6 @@ Page({
     });
   },
   touchstart(e) {
-    console.log('touchstart', e.touches[0].clientX);
     this.setData({
       startX: e.touches[0].clientX,
     });
@@ -35,6 +34,9 @@ Page({
     this.setData({
       endX: e.changedTouches[0].clientX,
     });
+  },
+  touchend(e) {
+    console.log('touchend', e);
   },
   Show() {
     this.setData({

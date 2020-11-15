@@ -1,3 +1,5 @@
+const { router } = require('../../framework/index');
+
 Page({
   data: {
     open: false,
@@ -9,4 +11,5 @@ Page({
     staus: 1,
     translate: '',
   },
+  navigate: router.navigate,
 });

@@ -19,12 +19,21 @@
   </view>
   <view
     data-width="{{windowWidth}}"
+    bindtouchstart="{{test.touchstart}}"
     bindtouchmove="{{test.touchmove}}"
     bindtouchend="{{test.touchend}}"
-    bindtouchstart="{{test.touchstart}}"
+    bindtouchcancel="{{test.touchend}}"
     class="page-top"
     style="color:white;"
   >
-    右滑出现侧边菜单
+    <view>右滑出现侧边菜单</view>
+    <view>顺便提醒一下，小程序bindtouchend在向左滑动时移出屏幕外不触发, 需要指定bindtouchcancel指向touchend事件</view>
+    <button
+      style="margin-top: 30rpx;"
+      catchtap="navigate"
+      data-info="{{ { name: 'user_center' } }}"
+    >
+      跳转个人中心
+    </button>
   </view>
 </view>
