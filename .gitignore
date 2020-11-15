@@ -1,15 +1,8 @@
-# dependencies
-node_modules
-# production
-/build
-
-# misc
+# system
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# npm packages
+node_modules
+
+# eslint
+.eslintcache
