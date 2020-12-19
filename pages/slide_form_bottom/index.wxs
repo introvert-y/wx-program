@@ -1,0 +1,79 @@
+var newmark = startmark = 0
+var status = 0
+var lastX = 100
+function touchstart(e, ins) {
+  var pageY = (e.touches[0] || e.changedTouches[0]).pageY
+  startmark = newmark = pageY
+  console.log('start', pageY);
+}
+function touchmove(e, ins) {
+  var pageY = (e.touches[0] || e.changedTouches[0]).pageY
+  newmark = pageY
+  console.log('touchmove', pageY);
+
+  // var data = ins.getData()
+  var data = {
+    sliderBoxHeight: e.target.dataset.height
+  }
+  if (startmark < pageY) {
+    console.log('向下滑动了')
+    if (lastX === data.sliderBoxHeight) {
+      console.log('静止');
+      return;
+    }
+    if (data.sliderBoxHeight > Math.abs(newmark - startmark)) {
+      // console.log(111, JSON.stringify(event), context.newmark - context.startmark)
+      ins.selectComponent('.slider_box').setStyle({
+        transform: 'translateY(' + Math.min(data.sliderBoxHeight, (lastX + Math.abs(newmark - startmark))) + 'px)'
+      })
+    }
+  }
+  if (startmark > pageY) {
+    console.log('向上滑动了')
+    ins.selectComponent('.slider_box').setStyle({
+      transform: 'translateY(' + Math.max(0, (lastX - Math.abs(newmark - startmark))) + 'px)'
+    })
+  }
+}
+function touchend(e, ins) {
+  var pageY = (e.touches[0] || e.changedTouches[0]).pageY
+  newmark = pageY
+  console.log('touchend', pageY);
+  // var data = ins.getData()
+  var data = {
+    sliderBoxHeight: e.target.dataset.height
+  }
+
+  if (startmark < pageY) {
+    if (data.sliderBoxHeight > Math.abs(newmark - startmark)) {
+      ins.selectComponent('.slider_box').setStyle({
+        transform: 'translateY(' + Math.min(data.sliderBoxHeight, (lastX + newmark - startmark)) + 'px)'
+      })
+      if (lastX >= (data.sliderBoxHeight)) {
+        lastX = data.sliderBoxHeight;
+        console.log('last 封顶', lastX);
+        return;
+      }
+      lastX += newmark - startmark
+      if (lastX >= (data.sliderBoxHeight)) {
+        lastX = data.sliderBoxHeight;
+        console.log('last 封顶', lastX);
+        return;
+      }
+      console.log('last', lastX);
+    }
+  }
+  if (startmark > newmark) {
+    console.log('touchend 向上滑动了')
+    ins.selectComponent('.slider_box').setStyle({
+      transform: 'translateY(' +  Math.max(0, Math.floor((lastX - Math.abs(newmark - startmark)))) + 'px)'
+    })
+    lastX = 0;
+  }
+
+}
+module.exports = {
+  touchstart: touchstart,
+  touchmove: touchmove,
+  touchend: touchend
+}

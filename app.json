@@ -11,6 +11,7 @@
     "pages/observes/index",
     "pages/stick_top/index",
     "pages/sidebar/index",
+    "pages/slide_form_bottom/index",
     "pages/await/index"
   ],
   "tabBar": {

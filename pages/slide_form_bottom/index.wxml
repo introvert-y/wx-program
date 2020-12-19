@@ -1,0 +1,16 @@
+<wxs src="./index.wxs" module="test"></wxs>
+
+
+<!-- 确定了，以星盘首页的形式来处理冒出一部分的情况 -->
+<view class="bg"></view>
+<view
+  class="slider_box"
+  style="height: {{isMore ? '800' : '600'}}rpx"
+  data-height="{{sliderBoxHeight}}"
+  data-initHeight="{{100}}"
+  bindtouchstart="{{test.touchstart}}"
+  bindtouchmove="{{test.touchmove}}"
+  bindtouchend="{{test.touchend}}"
+  bindtouchcancel="{{test.touchend}}"
+>
+</view>

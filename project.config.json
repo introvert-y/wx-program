@@ -105,6 +105,13 @@
         {
           "name": "侧边栏",
           "pathName": "pages/sidebar/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "从下往上滚动",
+          "pathName": "pages/slide_form_bottom/index",
+          "query": "",
           "scene": null
         }
       ]
