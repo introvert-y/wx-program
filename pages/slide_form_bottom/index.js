@@ -3,7 +3,11 @@ const { config } = require('../../framework/index.js');
 Page({
   data: {
     isMore: false,
-    sliderBoxHeight: 0,
+    sliderBox: {
+      height: 0,
+      initHeight: 280,
+      minHeight: 100,
+    },
   },
   onReady() {
     this.caculateBoxHeight();
@@ -20,7 +24,7 @@ Page({
       const ratio = 750 / clientWidth;
       const height = clientHeight * ratio;
       that.setData({
-        sliderBoxHeight: Math.floor(height / 2),
+        'sliderBox.height': Math.floor(height / 2),
       });
     }).exec();
   },
