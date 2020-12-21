@@ -1,6 +1,6 @@
 var newmark = startmark = 0
 var lastX = 0
-
+var clock = false
 function touchstart(e, ins) {
   var instance = e.instance;
   var info = instance.getDataset();
@@ -23,14 +23,12 @@ function touchmove(e, ins) {
   var state = ins.getState();
   var pageY = (e.touches[0] || e.changedTouches[0]).pageY;
   var newmark = pageY;
-  var condition = (state.minHeight <= (state.height - (lastX + newmark - startmark)));
-  if (Math.abs(newmark - startmark) < 10) {
-    return;
-  }
+  var condition = (state.minHeight <= ( -5 + state.height - (lastX + Math.abs(newmark - startmark))));
 
-  if (startmark < pageY) {
+  console.log('move condition', condition, state.height - (lastX + Math.abs(newmark - startmark)))
+  if (startmark < pageY && condition) {
     if ((state.height > Math.abs(newmark - startmark))) {
-      console.log('transform', (lastX + Math.abs(newmark - startmark)));
+      console.log('transform', (lastX + newmark - startmark));
       ins.selectComponent('.slider_box').setStyle({
         transform: 'translate3d(0, ' + Math.min(state.height, (lastX + Math.abs(newmark - startmark))) + 'px, 0)'
       })
@@ -46,28 +44,34 @@ function touchend(e, ins) {
   var pageY = (e.touches[0] || e.changedTouches[0]).pageY
   newmark = pageY
   var state = ins.getState();
+  var condition = (state.minHeight <= (state.height - (lastX + newmark - startmark)));
+
   console.log('touchend', Math.abs(newmark - startmark));
-  if (Math.abs(newmark - startmark) < 10) {
-    return;
-  }
+
 
   if (startmark < pageY) {
-    vins.selectComponent('.slider_box').setStyle({
-      transform: 'translate3d(0, ' + Math.min(state.height, Math.floor((lastX + newmark - startmark))) + 'px, 0)'
+    ins.selectComponent('.slider_box').setStyle({
+      transform: 'translate3d(0, ' + (condition ? (lastX + newmark - startmark) : state.initHeight)  + 'px, 0)'
     })
-    lastX += Math.floor(newmark - startmark)
+    lastX += Math.abs(newmark - startmark)
+    if(lastX >= state.initHeight) {
+      lastX = state.initHeight
+    }
+    console.log('下滑1111', lastX)
   }
   if (startmark > newmark) {
     ins.selectComponent('.slider_box').setStyle({
       transform: 'translate3d(0, ' +  Math.max(0, Math.floor((lastX - Math.abs(newmark - startmark)))) + 'px, 0)'
     })
     lastX -= Math.abs(newmark - startmark);
-    if (lastX >= state.height) {
-      lastX === state.height;
-      return;
+    if (lastX <= 0) {
+      lastX = 0;
+      // return;
     }
+    console.log('上滑', lastX)
+
   }
-  console.log('last', lastX);
+  // console.log('last', lastX);
 }
 module.exports = {
   touchstart: touchstart,

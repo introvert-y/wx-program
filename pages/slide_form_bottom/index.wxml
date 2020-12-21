@@ -5,7 +5,7 @@
 <view class="bg"></view>
 <view
   class="slider_box"
-  style="transform: translate3d(0, {{sliderBox.minHeight}}px, 0)"
+  style="transform: translate3d(0, {{sliderBox.height - sliderBox.initHeight}}px, 0)"
   data-height="{{sliderBox.height}}"
   data-init="{{sliderBox.initHeight}}"
   data-min="{{sliderBox.minHeight}}"
