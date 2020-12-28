@@ -7,6 +7,7 @@ Page({
     startX: 0,
     endX: 0,
     animationData: {},
+    check: false,
   },
   onReady() {
   },
@@ -57,6 +58,12 @@ Page({
       query: {
         name: 'Ming',
       },
+    });
+  },
+  toggleCheck() {
+    const { check } = this.data;
+    this.setData({
+      check: !check,
     });
   },
 });

@@ -13,18 +13,8 @@
 <!-- 承载网页的容器。会自动铺满整个小程序页面，个人类型的小程序暂不支持使用。 -->
 <button bindtap="navigate" data-info="{{ faq.route }}">跳转外部</button>
 <!-- 两个div连着，左滑通过方法左移，左滑一点就显示一点 -->
-<view
-  class="flex-box {{isShow ? 'slide' : 'slide-leave'}}"
-  bindtouchstart="touchstart"
-  bindtouchmove="touchmove"
-  bindtouchend="touchend"
->
-  <view class="practice">
-    先帝创业未半而中道崩殂，今天下三分，益州疲弊，此诚危急存亡之秋也。然侍卫之臣不懈于内，忠志之士忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气，不宜妄自菲薄，引喻失义，以塞忠谏之路也。
-宫中府中，俱为一体，陟罚臧否，不宜异同。若有作奸犯科及为忠善者，宜付有司论其刑赏，以昭陛下平明之理，不宜偏私，使内外异法也。
-  </view>
-  <view class="box">
-    <text class="button">删除</text>
-    <text class="button">置顶</text>
-  </view>
+
+<view class="bruce flex-ct-x" data-title="iOS开关按钮">
+  <view class="ios-switch {{check ? 'check': ''}}" bindtap="toggleCheck" />
 </view>
+
