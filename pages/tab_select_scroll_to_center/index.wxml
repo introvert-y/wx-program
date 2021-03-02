@@ -1,0 +1,22 @@
+<!-- 横向滚动菜单-选中标题居中显示 -->
+
+<view class="header">横向滚动菜单-选中标题居中显示</view>
+<scroll-view
+  class="main"
+  scroll-left="{{scrollLeft}}"
+  scroll-with-animation
+  scroll-x
+>
+<view class="box">
+  <view
+    wx:for="{{tabmenu}}"
+    wx:key="index"
+    class="item {{item.active?'active':''}} "
+    id="item_{{index}}"
+    data-index="{{index}}"
+    bindtap='onMove'
+  >
+    {{item.name}}
+  </view>
+</view>
+</scroll-view>

@@ -12,6 +12,7 @@
     "pages/stick_top/index",
     "pages/sidebar/index",
     "pages/slide_form_bottom/index",
+    "pages/tab_select_scroll_to_center/index",
     "pages/await/index"
   ],
   "tabBar": {
