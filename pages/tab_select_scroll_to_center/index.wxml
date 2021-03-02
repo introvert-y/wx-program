@@ -11,12 +11,13 @@
   <view
     wx:for="{{tabmenu}}"
     wx:key="index"
-    class="item {{item.active?'active':''}} "
+    class="item {{crtTab === index ?'active':''}} "
     id="item_{{index}}"
     data-index="{{index}}"
     bindtap='onMove'
   >
     {{item.name}}
+    <view wx:if="{{crtTab === index}}" class="bottom_line" ></view>
   </view>
 </view>
 </scroll-view>
