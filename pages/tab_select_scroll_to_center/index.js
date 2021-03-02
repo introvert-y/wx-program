@@ -70,7 +70,6 @@ Page({
 
     // 获取当前点击元素的宽度
     query.select('#item_' + index).boundingClientRect(function (rect) {
-
       const clientWidth = rect.width;
       console.log('e.currentTarget.offsetLeft', rect);
       that.setData({

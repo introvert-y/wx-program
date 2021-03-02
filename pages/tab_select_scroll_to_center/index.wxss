@@ -6,6 +6,8 @@ page {
   align-items: center;
   width: 100%;
   margin-top: 40rpx;
+  background-color: #fff;
+
 }
 .box {
   display: flex;
@@ -27,6 +29,14 @@ page {
   right: 40rpx;
   bottom: 0;
   background-color: #377fee;
+}
+.item .backgroup_animate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: red;
 }
 .header {
   margin-top: 30rpx;

@@ -16,6 +16,7 @@
     data-index="{{index}}"
     bindtap='onMove'
   >
+    <!-- <view class="backgroup_animate"></view> -->
     {{item.name}}
     <view wx:if="{{crtTab === index}}" class="bottom_line" ></view>
   </view>
