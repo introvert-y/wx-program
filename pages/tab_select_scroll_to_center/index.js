@@ -48,11 +48,19 @@ Page({
     scrollLeft: 0,
     bottomLineWidth: 0,
     crtTab: 0,
+    offsetLeft: 0,
   },
   onShow() {
     // 获取当前设备的宽度
     this.setData({
       deviceWidth: wx.getSystemInfoSync().windowWidth,
+    });
+    this.onMove({
+      currentTarget: {
+        dataset: {
+          index: 0,
+        },
+      },
     });
   },
   onShareAppMessage() {
@@ -66,8 +74,6 @@ Page({
     //选择id
     var that = this;
 
-    var width = 0
-
     // 获取当前点击元素的宽度
     query.select('#item_' + index).boundingClientRect(function (rect) {
       const clientWidth = rect.width;
@@ -77,6 +83,7 @@ Page({
         scrollLeft: e.currentTarget.offsetLeft + (clientWidth / 2 - that.data.deviceWidth / 2),
         bottomLineWidth: clientWidth,
         crtTab: index,
+        offsetLeft: e.currentTarget.offsetLeft,
       })
     }).exec();
   },

@@ -1,6 +1,20 @@
 page {
   background-color: #f3f3f7;
 }
+.header {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.title {
+  margin-top: 30rpx;
+  margin-bottom: 10rpx;
+  font-size: 30rpx;
+}
+.style_tab {
+  display: flex;
+  align-items: center;
+}
 .main{
   display: flex;
   align-items: center;
@@ -10,14 +24,32 @@ page {
 
 }
 .box {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
+}
+.animate_bottom_line {
+  position: absolute;
+  height: 2px;
+  left: 40rpx;
+  bottom: 0;
+  background-color: #377fee;
+  transition: all 300ms;
+}
+.animate_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #377fee;
+  transition: all 300ms;
 }
 .item {
   position: relative;
   padding: 20rpx 40rpx;
   white-space: nowrap;
+  transform: translate(3d);
 }
 .item.active {
   color: #377fee;
@@ -37,8 +69,5 @@ page {
   bottom: 0;
   left: 0;
   background-color: red;
-}
-.header {
-  margin-top: 30rpx;
 }
 

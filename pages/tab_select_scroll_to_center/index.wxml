@@ -1,6 +1,11 @@
 <!-- 横向滚动菜单-选中标题居中显示 -->
 
 <view class="header">横向滚动菜单-选中标题居中显示</view>
+<view class="title">滑动样式选择</view>
+<view class="style_tab">
+  <view class="style_item">下划线跟随</view>
+  <view class="style_item">背景跟随</view>
+</view>
 <scroll-view
   class="main"
   scroll-left="{{scrollLeft}}"
@@ -8,6 +13,8 @@
   scroll-x
 >
 <view class="box">
+  <view class="animate_bottom_line" style="width: {{bottomLineWidth - 40}}px; transform: translate3d({{offsetLeft}}px, 0, 0)"></view>
+  <!-- <view class="animate_background" style="width: {{bottomLineWidth}}px; transform: translate3d({{offsetLeft}}px, 0, 0)"></view> -->
   <view
     wx:for="{{tabmenu}}"
     wx:key="index"
@@ -18,7 +25,7 @@
   >
     <!-- <view class="backgroup_animate"></view> -->
     {{item.name}}
-    <view wx:if="{{crtTab === index}}" class="bottom_line" ></view>
+    <!-- <view wx:if="{{crtTab === index}}" class="bottom_line" ></view> -->
   </view>
 </view>
 </scroll-view>

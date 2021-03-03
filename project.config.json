@@ -21,20 +21,17 @@
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
-    "useMultiFrameRuntime": true,
+    "useMultiFrameRuntime": false,
     "useApiHook": true,
-    "useApiHostProcess": false,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     },
-    "enableEngineNative": false,
     "bundle": false,
     "useIsolateContext": true,
     "useCompilerModule": false,
     "userConfirmedUseCompilerModuleSwitch": true,
-    "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
     "minifyWXSS": true
@@ -117,6 +114,12 @@
         {
           "name": "从下往上滚动",
           "pathName": "pages/slide_form_bottom/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "横向滚动菜单-选中标题居中显示",
+          "pathName": "pages/tab_select_scroll_to_center/index",
           "query": "",
           "scene": null
         }
