@@ -14,6 +14,13 @@ page {
 .style_tab {
   display: flex;
   align-items: center;
+  padding: 20rpx 40rpx;
+}
+.style_item {
+  margin-right: 30rpx;
+}
+.style_item.crt {
+  border: 2rpx solid red;
 }
 .main{
   display: flex;
@@ -51,8 +58,11 @@ page {
   white-space: nowrap;
   transform: translate(3d);
 }
-.item.active {
+.item.active_line {
   color: #377fee;
+}
+.item.active_background {
+  color: #fff;
 }
 .item .bottom_line {
   position: absolute;

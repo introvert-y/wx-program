@@ -1,5 +1,9 @@
 const { config } = require('../../framework/index.js');
 
+const styleMap = {
+  line: '00',
+  backgroundColor: '01',
+};
 Page({
   data: {
     tabmenu:[
@@ -43,12 +47,14 @@ Page({
       name: 'Vue3333',
       active: false
     }
-  ],
+    ],
     deviceWidth: 0,
     scrollLeft: 0,
     bottomLineWidth: 0,
     crtTab: 0,
     offsetLeft: 0,
+    crtStyle: styleMap.line,
+    styleMap,
   },
   onShow() {
     // 获取当前设备的宽度
@@ -65,6 +71,12 @@ Page({
   },
   onShareAppMessage() {
     return config.shareData;
+  },
+  switchStyle(e) {
+    const { info } = e.currentTarget.dataset;
+    this.setData({
+      crtStyle: info,
+    });
   },
   onMove(e) {
     console.log('e.currentTarget', e.currentTarget);

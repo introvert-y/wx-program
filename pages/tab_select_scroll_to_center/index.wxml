@@ -3,8 +3,16 @@
 <view class="header">横向滚动菜单-选中标题居中显示</view>
 <view class="title">滑动样式选择</view>
 <view class="style_tab">
-  <view class="style_item">下划线跟随</view>
-  <view class="style_item">背景跟随</view>
+  <view
+    class="style_item {{crtStyle === styleMap.line ? 'crt' : ''}}"
+    data-info="{{styleMap.line}}"
+    bindtap="switchStyle"
+  >下划线跟随</view>
+  <view
+    class="style_item {{crtStyle === styleMap.backgroundColor ? 'crt' : ''}}"
+    data-info="{{styleMap.backgroundColor}}"
+    bindtap="switchStyle"
+  >背景跟随</view>
 </view>
 <scroll-view
   class="main"
@@ -13,12 +21,20 @@
   scroll-x
 >
 <view class="box">
-  <view class="animate_bottom_line" style="width: {{bottomLineWidth - 40}}px; transform: translate3d({{offsetLeft}}px, 0, 0)"></view>
-  <!-- <view class="animate_background" style="width: {{bottomLineWidth}}px; transform: translate3d({{offsetLeft}}px, 0, 0)"></view> -->
+  <view
+    class="animate_bottom_line"
+    style="width: {{bottomLineWidth - 40}}px; transform: translate3d({{offsetLeft}}px, 0, 0)"
+    wx:if="{{crtStyle === styleMap.line}}"
+  />
+  <view
+    class="animate_background"
+    style="width: {{bottomLineWidth}}px; transform: translate3d({{offsetLeft}}px, 0, 0)"
+    wx:else
+  />
   <view
     wx:for="{{tabmenu}}"
     wx:key="index"
-    class="item {{crtTab === index ?'active':''}} "
+    class="item {{crtTab === index ? (crtStyle === styleMap.line ? 'active_line' : 'active_background') : ''}}"
     id="item_{{index}}"
     data-index="{{index}}"
     bindtap='onMove'
